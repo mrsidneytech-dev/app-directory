@@ -33,7 +33,7 @@ ALTERNATIVE DATA SOURCES:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Applications & Subscriptions Directory</title>
+    <title>OIS Applications & Online Subscriptions Directory 4.0</title>
     <style>
         * {
             margin: 0;
@@ -61,133 +61,7 @@ ALTERNATIVE DATA SOURCES:
             font-size: 2.5rem;
         }
 
-        .admin-section {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #ecf0f1;
-        }
 
-        .admin-toggle {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .admin-toggle button {
-            padding: 8px 16px;
-            background: #95a5a6;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .admin-toggle button:hover {
-            background: #7f8c8d;
-        }
-
-        .admin-login {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            display: none;
-        }
-
-        .admin-login h3 {
-            margin-bottom: 15px;
-            color: #34495e;
-        }
-
-        .admin-login input {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-right: 10px;
-            font-size: 14px;
-        }
-
-        .admin-login button {
-            padding: 10px 20px;
-            background: #e74c3c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .admin-login button:hover {
-            background: #c0392b;
-        }
-
-        .admin-panel {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            display: none;
-        }
-
-        .admin-panel.authenticated {
-            display: block;
-        }
-
-        .admin-panel h3 {
-            margin-bottom: 15px;
-            color: #34495e;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .admin-panel textarea {
-            width: 100%;
-            height: 120px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: monospace;
-            font-size: 12px;
-            resize: vertical;
-        }
-
-        .admin-panel button {
-            margin-top: 10px;
-            margin-right: 10px;
-            padding: 8px 16px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .admin-panel button:hover {
-            background: #2980b9;
-        }
-
-        .admin-panel button.logout {
-            background: #e74c3c;
-            margin-left: auto;
-        }
-
-        .admin-panel button.logout:hover {
-            background: #c0392b;
-        }
-
-        .password-strength {
-            margin-top: 10px;
-            padding: 10px;
-            background: #f8f9fa;
-            border-radius: 5px;
-            font-size: 12px;
-            color: #666;
-        }
 
         .filters {
             background: white;
@@ -535,7 +409,7 @@ DATA SOURCE OPTIONS:
 -->
 
 <div class="container">
-    <h1>School Applications & Subscriptions</h1>
+    <h1>OIS Applications & Online Subscriptions</h1>
 
     <!-- Filters -->
     <div class="filters">
@@ -598,57 +472,9 @@ DATA SOURCE OPTIONS:
 
     <!-- Pagination -->
     <div id="pagination" class="pagination"></div>
-
-    <!-- Admin Section (Password Protected) -->
-    <div class="admin-section">
-        <div class="admin-toggle">
-            <button onclick="toggleAdminSection()">Admin Access</button>
-        </div>
-
-        <!-- Admin Login -->
-        <div id="adminLogin" class="admin-login">
-            <h3>🔐 Admin Login Required</h3>
-            <input type="password" id="adminPassword" placeholder="Enter admin password..." onkeypress="checkEnter(event)">
-            <button onclick="checkAdminPassword()">Login</button>
-            <div class="password-strength">
-                <strong>For Administrators:</strong> The admin password can be changed in the JavaScript code by modifying the ADMIN_PASSWORD variable.
-            </div>
-        </div>
-
-        <!-- Admin Panel (Hidden until authenticated) -->
-        <div id="adminPanel" class="admin-panel">
-            <h3>
-                Admin: Data Management
-                <button class="logout" onclick="logoutAdmin()">Logout</button>
-            </h3>
-            <textarea id="jsonInput" placeholder='Paste JSON array OR CSV data here. For CSV format:
-id,title,description,thumbnail,url,tags,department,status
-1,"App Name","Description","image-url","app-url","Tag1;Tag2;Tag3","Department","Active"
-
-Note: Tags should be separated by semicolons (;) in CSV format.'></textarea>
-            <button onclick="importData()">Import Data</button>
-            <button onclick="exportJSON()">Export as JSON</button>
-            <button onclick="exportCSV()">Export as CSV</button>
-            <div style="margin-top: 10px; font-size: 12px; color: #666;">
-                <strong>CSV URL Configuration:</strong> To load from a CSV file automatically, set the CSV_URL variable in the code.<br>
-                <strong>Current CSV URL:</strong> <span id="csvUrlDisplay">Not configured</span>
-            </div>
-        </div>
-    </div>
 </div>
 
 <script>
-    // ADMIN CONFIGURATION
-    // 
-    // CHANGE THIS PASSWORD TO SECURE YOUR ADMIN PANEL
-    // Use a strong password with letters, numbers, and symbols
-    // 
-    const ADMIN_PASSWORD = 'SchoolAdmin2024!'; // CHANGE THIS PASSWORD!
-    
-    // Session management
-    let isAdminAuthenticated = false;
-    const ADMIN_SESSION_KEY = 'school_apps_admin_session';
-    const SESSION_TIMEOUT = 60 * 60 * 1000; // 1 hour in milliseconds
     // FALLBACK DATA - Used if CSV fails to load
     let fallbackApps = [
         {
@@ -764,7 +590,7 @@ Note: Tags should be separated by semicolons (;) in CSV format.'></textarea>
     // 2. GitHub raw file: https://raw.githubusercontent.com/username/repo/main/apps-data.csv
     // 3. Any publicly accessible CSV file
     // 
-    const CSV_URL = ''; // SET YOUR CSV URL HERE
+    const CSV_URL = 'https://raw.githubusercontent.com/mrsidneytech-dev/app-directory/refs/heads/main/apps-data.csv'; // SET YOUR CSV URL HERE
     
     // CSV Format Expected:
     // id,title,description,thumbnail,url,tags,department,status
@@ -1227,6 +1053,5 @@ Note: Tags should be separated by semicolons (;) in CSV format.'></textarea>
     // Initialize the app after DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {
         loadFromCSV();
-        updateCSVUrlDisplay();
     });
 </script>
