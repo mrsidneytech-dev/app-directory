@@ -1,0 +1,1112 @@
+<!--
+HOSTING INSTRUCTIONS:
+1. GitHub Pages: Create a new repository, upload this HTML file, enable Pages in Settings
+2. Netlify: Drag and drop this file to netlify.com/drop or connect your GitHub repo
+3. Vercel: Upload via vercel.com or connect GitHub repository
+
+EMBEDDING IN GOOGLE SITES:
+- New Google Sites does NOT accept raw HTML/JS paste
+- You MUST host this file first (use above methods)
+- Then embed using: Insert > Embed > URL > paste your hosted file URL
+- Use full page iframe for best experience
+
+CSV DATA SOURCE SETUP:
+1. Create a CSV file with these columns: id,title,description,thumbnail,url,tags,department,status
+2. For tags, use semicolons to separate multiple tags: "AI;Productivity;Education"
+3. Host your CSV file:
+   - Google Sheets: Make public, get CSV export link: https://docs.google.com/spreadsheets/d/SHEET_ID/export?format=csv&gid=0
+   - GitHub: Upload CSV, use raw file URL: https://raw.githubusercontent.com/username/repo/main/apps-data.csv
+   - Any other public hosting service
+4. Update the CSV_URL variable in the JavaScript code with your CSV file URL
+5. If CSV fails to load, fallback data will be used automatically
+
+CSV FORMAT EXAMPLE:
+id,title,description,thumbnail,url,tags,department,status
+1,"ChatGPT Plus","AI assistant for education","https://example.com/image.jpg","https://chat.openai.com","AI;Productivity;Writing","Technology","Active"
+2,"Google Classroom","Learning management system","","https://classroom.google.com","Education;LMS","Technology","Active"
+
+ALTERNATIVE DATA SOURCES:
+- JSON File: Uncomment loadFromJSON() function and set JSON file URL
+- Manual Import: Use the admin panel to paste CSV or JSON data directly
+--><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Applications & Subscriptions Directory</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+
+        .admin-panel {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .admin-panel h3 {
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        .admin-panel textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            resize: vertical;
+        }
+
+        .admin-panel button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .admin-panel button:hover {
+            background: #2980b9;
+        }
+
+        .filters {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .filter-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .search-box {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .multi-select {
+            position: relative;
+        }
+
+        .multi-select-display {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+            cursor: pointer;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+        }
+
+        .multi-select-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+
+        .multi-select-option {
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .multi-select-option:hover {
+            background: #f8f9fa;
+        }
+
+        .multi-select-option input {
+            margin-right: 8px;
+        }
+
+        .selected-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 5px;
+        }
+
+        .selected-tag {
+            background: #3498db;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .selected-tag .remove {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .results-info {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .items-per-page {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .items-per-page select {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .card-thumbnail {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+        }
+
+        .card-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .card-description {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-meta {
+            margin-bottom: 15px;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            background: #e8f4f8;
+            color: #2980b9;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status.active {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status.under-process {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status.being-purchased {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .status.expired {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .card-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .card-link:hover {
+            background: #2980b9;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .pagination button {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            background: white;
+            color: #333;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: #f8f9fa;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination .current {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #7f8c8d;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .filter-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .results-info {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .filters, .admin-panel {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--
+HOSTING INSTRUCTIONS:
+1. GitHub Pages: Create a new repository, upload this HTML file, enable Pages in Settings
+2. Netlify: Drag and drop this file to netlify.com/drop or connect your GitHub repo
+3. Vercel: Upload via vercel.com or connect GitHub repository
+
+EMBEDDING IN GOOGLE SITES:
+- New Google Sites does NOT accept raw HTML/JS paste
+- You MUST host this file first (use above methods)
+- Then embed using: Insert > Embed > URL > paste your hosted file URL
+- Use full page iframe for best experience
+
+DATA SOURCE OPTIONS:
+- Embedded: Uses the data array below (default)
+- JSON File: Uncomment loadFromJSON() and host a JSON file
+- Google Sheets: Use CSV export URL with loadFromCSV()
+-->
+
+<div class="container">
+    <h1>School Applications & Subscriptions</h1>
+
+    <!-- Admin Panel for JSON Import -->
+    <div class="admin-panel">
+        <h3>Admin: Import Data</h3>
+        <textarea id="jsonInput" placeholder='Paste JSON array OR CSV data here. For CSV format:
+id,title,description,thumbnail,url,tags,department,status
+1,"App Name","Description","image-url","app-url","Tag1;Tag2;Tag3","Department","Active"
+
+Note: Tags should be separated by semicolons (;) in CSV format.'></textarea>
+        <button onclick="importData()">Import Data</button>
+        <button onclick="exportJSON()">Export as JSON</button>
+        <button onclick="exportCSV()">Export as CSV</button>
+        <div style="margin-top: 10px; font-size: 12px; color: #666;">
+            <strong>CSV URL Configuration:</strong> To load from a CSV file automatically, set the CSV_URL variable in the code.<br>
+            <strong>Current CSV URL:</strong> <span id="csvUrlDisplay">Not configured</span>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+        <div class="filter-row">
+            <div class="filter-group">
+                <label for="searchBox">Search</label>
+                <input type="text" id="searchBox" class="search-box" placeholder="Search titles, descriptions, tags..." aria-label="Search applications">
+            </div>
+            
+            <div class="filter-group">
+                <label>Tags</label>
+                <div class="multi-select" id="tagsFilter">
+                    <div class="multi-select-display" onclick="toggleDropdown('tagsFilter')">Select tags...</div>
+                    <div class="multi-select-dropdown"></div>
+                </div>
+                <div class="selected-tags" id="selectedTags"></div>
+            </div>
+            
+            <div class="filter-group">
+                <label>Department</label>
+                <div class="multi-select" id="departmentFilter">
+                    <div class="multi-select-display" onclick="toggleDropdown('departmentFilter')">Select departments...</div>
+                    <div class="multi-select-dropdown"></div>
+                </div>
+                <div class="selected-tags" id="selectedDepartments"></div>
+            </div>
+            
+            <div class="filter-group">
+                <label>Status</label>
+                <div class="multi-select" id="statusFilter">
+                    <div class="multi-select-display" onclick="toggleDropdown('statusFilter')">Select status...</div>
+                    <div class="multi-select-dropdown"></div>
+                </div>
+                <div class="selected-tags" id="selectedStatuses"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Info -->
+    <div class="results-info">
+        <div id="resultsCount">Loading...</div>
+        <div class="items-per-page">
+            <label for="itemsPerPage">Items per page:</label>
+            <select id="itemsPerPage" onchange="changeItemsPerPage()">
+                <option value="12">12</option>
+                <option value="24">24</option>
+                <option value="48">48</option>
+                <option value="100" selected>100</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Applications Grid -->
+    <div id="appGrid" class="grid"></div>
+
+    <!-- No Results Message -->
+    <div id="noResults" class="no-results" style="display: none;">
+        <p>No applications found matching your criteria.</p>
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="pagination"></div>
+</div>
+
+<script>
+    // FALLBACK DATA - Used if CSV fails to load
+    let fallbackApps = [
+        {
+            "id": "1",
+            "title": "ChatGPT Plus",
+            "description": "Advanced AI assistant for education, research, and productivity tasks. Helps with lesson planning, content creation, and student support.",
+            "thumbnail": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
+            "url": "https://chat.openai.com/",
+            "tags": ["AI", "Productivity", "Writing", "Research"],
+            "department": "Technology",
+            "status": "Active"
+        },
+        {
+            "id": "2",
+            "title": "Google Workspace for Education",
+            "description": "Complete suite of cloud-based productivity tools including Gmail, Drive, Docs, Sheets, and Classroom for collaborative learning.",
+            "thumbnail": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=400&h=300&fit=crop",
+            "url": "https://workspace.google.com/education/",
+            "tags": ["Productivity", "Collaboration", "Cloud", "Email"],
+            "department": "Technology",
+            "status": "Active"
+        },
+        {
+            "id": "3",
+            "title": "Adobe Creative Cloud",
+            "description": "Professional creative software suite including Photoshop, Illustrator, InDesign, and Premiere Pro for digital arts and design courses.",
+            "thumbnail": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
+            "url": "https://www.adobe.com/creativecloud.html",
+            "tags": ["Design", "Creative", "Video", "Graphics"],
+            "department": "Arts",
+            "status": "Active"
+        },
+        {
+            "id": "4",
+            "title": "Khan Academy",
+            "description": "Free online learning platform with courses in mathematics, science, programming, history, and more. Perfect for personalized learning.",
+            "thumbnail": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop",
+            "url": "https://www.khanacademy.org/",
+            "tags": ["Education", "Mathematics", "Science", "Free"],
+            "department": "Mathematics",
+            "status": "Active"
+        },
+        {
+            "id": "5",
+            "title": "Scratch Programming",
+            "description": "Visual programming language designed for children to learn coding concepts through interactive stories, games, and animations.",
+            "thumbnail": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=400&h=300&fit=crop",
+            "url": "https://scratch.mit.edu/",
+            "tags": ["Programming", "Education", "Kids", "Interactive"],
+            "department": "Computer Science",
+            "status": "Active"
+        },
+        {
+            "id": "6",
+            "title": "Zoom Education",
+            "description": "Video conferencing platform for virtual classrooms, parent meetings, and remote learning sessions with education-specific features.",
+            "thumbnail": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400&h=300&fit=crop",
+            "url": "https://zoom.us/education",
+            "tags": ["Video Conference", "Remote Learning", "Communication"],
+            "department": "Technology",
+            "status": "Under Process"
+        },
+        {
+            "id": "7",
+            "title": "Canva for Education",
+            "description": "User-friendly graphic design platform with educational templates, allowing students and teachers to create presentations, posters, and infographics.",
+            "thumbnail": "https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop",
+            "url": "https://www.canva.com/education/",
+            "tags": ["Design", "Templates", "Presentations", "Graphics"],
+            "department": "Arts",
+            "status": "Active"
+        },
+        {
+            "id": "8",
+            "title": "Flipgrid",
+            "description": "Video discussion platform where students can record and share video responses, fostering engagement and authentic communication.",
+            "thumbnail": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop",
+            "url": "https://info.flipgrid.com/",
+            "tags": ["Video", "Discussion", "Engagement", "Communication"],
+            "department": "English",
+            "status": "Being Purchased"
+        },
+        {
+            "id": "9",
+            "title": "Kahoot! EDU",
+            "description": "Game-based learning platform for creating interactive quizzes, surveys, and discussions that make learning fun and engaging.",
+            "thumbnail": "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=400&h=300&fit=crop",
+            "url": "https://kahoot.com/schools-u/",
+            "tags": ["Gamification", "Quizzes", "Interactive", "Assessment"],
+            "department": "General",
+            "status": "Active"
+        },
+        {
+            "id": "10",
+            "title": "Nearpod",
+            "description": "Interactive lesson platform that allows teachers to create engaging presentations with real-time student participation and assessment.",
+            "thumbnail": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop",
+            "url": "https://nearpod.com/",
+            "tags": ["Interactive", "Presentations", "Assessment", "Engagement"],
+            "department": "General",
+            "status": "Expired"
+        }
+    ];
+
+    // Main data array - will be populated from CSV
+    let allApps = [];
+
+    // CSV DATA LOADING - PRIMARY METHOD
+    // 
+    // CONFIGURATION: Update this CSV URL to point to your data source
+    // Options:
+    // 1. Google Sheets: Make sheet public, then use: https://docs.google.com/spreadsheets/d/SHEET_ID/export?format=csv&gid=0
+    // 2. GitHub raw file: https://raw.githubusercontent.com/username/repo/main/apps-data.csv
+    // 3. Any publicly accessible CSV file
+    // 
+    const CSV_URL = ''; // SET YOUR CSV URL HERE
+    
+    // CSV Format Expected:
+    // id,title,description,thumbnail,url,tags,department,status
+    // 1,"App Name","Description","image-url","app-url","Tag1;Tag2;Tag3","Department","Active"
+    //
+    // IMPORTANT: Tags should be separated by semicolons (;) within the tags column
+    
+    async function loadFromCSV() {
+        // If no CSV URL is configured, use fallback data
+        if (!CSV_URL) {
+            console.log('No CSV URL configured, using fallback data');
+            allApps = fallbackApps;
+            initializeApp();
+            return;
+        }
+
+        try {
+            console.log('Loading data from CSV:', CSV_URL);
+            const response = await fetch(CSV_URL);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const csvText = await response.text();
+            allApps = parseCSV(csvText);
+            console.log(`Successfully loaded ${allApps.length} applications from CSV`);
+            initializeApp();
+        } catch (error) {
+            console.error('Failed to load CSV data:', error);
+            console.log('Falling back to embedded data');
+            allApps = fallbackApps;
+            initializeApp();
+        }
+    }
+
+    // Parse CSV text into application objects
+    function parseCSV(csvText) {
+        const lines = csvText.trim().split('\n');
+        
+        if (lines.length < 2) {
+            throw new Error('CSV must have at least a header row and one data row');
+        }
+
+        // Parse header row - handle quoted fields
+        const headers = parseCSVRow(lines[0]);
+        console.log('CSV headers:', headers);
+        
+        // Parse data rows
+        const apps = [];
+        for (let i = 1; i < lines.length; i++) {
+            if (!lines[i].trim()) continue; // Skip empty lines
+            
+            try {
+                const values = parseCSVRow(lines[i]);
+                if (values.length !== headers.length) {
+                    console.warn(`Row ${i + 1} has ${values.length} values but expected ${headers.length}`);
+                }
+                
+                const app = {};
+                headers.forEach((header, index) => {
+                    const cleanHeader = header.trim().toLowerCase();
+                    let value = values[index]?.trim() || '';
+                    
+                    // Special handling for tags - split by semicolon
+                    if (cleanHeader === 'tags' && value) {
+                        app.tags = value.split(';').map(tag => tag.trim()).filter(tag => tag);
+                    } else {
+                        // Map common header variations
+                        const headerMap = {
+                            'id': 'id',
+                            'title': 'title',
+                            'name': 'title',
+                            'description': 'description',
+                            'desc': 'description',
+                            'thumbnail': 'thumbnail',
+                            'image': 'thumbnail',
+                            'url': 'url',
+                            'link': 'url',
+                            'tags': 'tags',
+                            'department': 'department',
+                            'dept': 'department',
+                            'status': 'status'
+                        };
+                        
+                        const mappedHeader = headerMap[cleanHeader] || cleanHeader;
+                        app[mappedHeader] = value;
+                    }
+                });
+                
+                // Only add if we have required fields
+                if (app.id && app.title) {
+                    apps.push(app);
+                }
+            } catch (error) {
+                console.warn(`Error parsing row ${i + 1}:`, error);
+            }
+        }
+        
+        return apps;
+    }
+
+    // Parse a single CSV row, handling quoted fields properly
+    function parseCSVRow(row) {
+        const result = [];
+        let current = '';
+        let inQuotes = false;
+        let i = 0;
+        
+        while (i < row.length) {
+            const char = row[i];
+            
+            if (char === '"') {
+                if (inQuotes && row[i + 1] === '"') {
+                    // Escaped quote
+                    current += '"';
+                    i += 2;
+                } else {
+                    // Start or end of quoted field
+                    inQuotes = !inQuotes;
+                    i++;
+                }
+            } else if (char === ',' && !inQuotes) {
+                // Field separator
+                result.push(current);
+                current = '';
+                i++;
+            } else {
+                current += char;
+                i++;
+            }
+        }
+        
+        // Add the last field
+        result.push(current);
+        
+        return result;
+    }
+
+    // ALTERNATIVE: Load from JSON file (uncomment to use instead of CSV)
+    // async function loadFromJSON() {
+    //     try {
+    //         const response = await fetch('https://your-domain.com/apps-data.json');
+    //         allApps = await response.json();
+    //         initializeApp();
+    //     } catch (error) {
+    //         console.error('Failed to load JSON data:', error);
+    //         allApps = fallbackApps;
+    //         initializeApp();
+    //     }
+    // }
+
+    // State management
+    let filteredApps = [...allApps];
+    let currentPage = 1;
+    let itemsPerPage = 100;
+    let selectedTags = new Set();
+    let selectedDepartments = new Set();
+    let selectedStatuses = new Set();
+    let searchTerm = '';
+
+    // Initialize the application
+    function initializeApp() {
+        setupEventListeners();
+        generateFilterOptions();
+        applyFilters();
+    }
+
+    // Start the application by loading CSV data
+    document.addEventListener('DOMContentLoaded', () => {
+        loadFromCSV();
+    });
+
+    // Setup event listeners
+    function setupEventListeners() {
+        const searchBox = document.getElementById('searchBox');
+        searchBox.addEventListener('input', (e) => {
+            searchTerm = e.target.value.toLowerCase();
+            applyFilters();
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.multi-select')) {
+                document.querySelectorAll('.multi-select-dropdown').forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    }
+
+    // Generate filter options from data
+    function generateFilterOptions() {
+        const tags = new Set();
+        const departments = new Set();
+        const statuses = new Set(['Active', 'Under Process', 'Being Purchased', 'Expired']);
+
+        allApps.forEach(app => {
+            if (app.tags) {
+                app.tags.forEach(tag => tags.add(tag));
+            }
+            if (app.department) departments.add(app.department);
+            if (app.status) statuses.add(app.status);
+        });
+
+        populateMultiSelect('tagsFilter', Array.from(tags).sort(), selectedTags, 'selectedTags');
+        populateMultiSelect('departmentFilter', Array.from(departments).sort(), selectedDepartments, 'selectedDepartments');
+        populateMultiSelect('statusFilter', Array.from(statuses), selectedStatuses, 'selectedStatuses');
+    }
+
+    // Populate multi-select dropdown
+    function populateMultiSelect(filterId, options, selectedSet, selectedDisplayId) {
+        const dropdown = document.querySelector(`#${filterId} .multi-select-dropdown`);
+        dropdown.innerHTML = '';
+
+        options.forEach(option => {
+            const optionElement = document.createElement('div');
+            optionElement.className = 'multi-select-option';
+            optionElement.innerHTML = `
+                <input type="checkbox" id="${filterId}_${option}" ${selectedSet.has(option) ? 'checked' : ''}>
+                <label for="${filterId}_${option}">${option}</label>
+            `;
+            
+            optionElement.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const checkbox = optionElement.querySelector('input');
+                checkbox.checked = !checkbox.checked;
+                
+                if (checkbox.checked) {
+                    selectedSet.add(option);
+                } else {
+                    selectedSet.delete(option);
+                }
+                
+                updateSelectedDisplay(selectedDisplayId, selectedSet);
+                applyFilters();
+            });
+            
+            dropdown.appendChild(optionElement);
+        });
+    }
+
+    // Toggle dropdown visibility
+    function toggleDropdown(filterId) {
+        const dropdown = document.querySelector(`#${filterId} .multi-select-dropdown`);
+        const isVisible = dropdown.style.display === 'block';
+        
+        // Close all dropdowns first
+        document.querySelectorAll('.multi-select-dropdown').forEach(d => d.style.display = 'none');
+        
+        // Toggle current dropdown
+        dropdown.style.display = isVisible ? 'none' : 'block';
+    }
+
+    // Update selected items display
+    function updateSelectedDisplay(displayId, selectedSet) {
+        const container = document.getElementById(displayId);
+        container.innerHTML = '';
+        
+        selectedSet.forEach(item => {
+            const tag = document.createElement('span');
+            tag.className = 'selected-tag';
+            tag.innerHTML = `
+                ${item}
+                <span class="remove" onclick="removeSelectedItem('${displayId}', '${item}')">&times;</span>
+            `;
+            container.appendChild(tag);
+        });
+    }
+
+    // Remove selected item
+    function removeSelectedItem(displayId, item) {
+        if (displayId === 'selectedTags') {
+            selectedTags.delete(item);
+            updateSelectedDisplay('selectedTags', selectedTags);
+        } else if (displayId === 'selectedDepartments') {
+            selectedDepartments.delete(item);
+            updateSelectedDisplay('selectedDepartments', selectedDepartments);
+        } else if (displayId === 'selectedStatuses') {
+            selectedStatuses.delete(item);
+            updateSelectedDisplay('selectedStatuses', selectedStatuses);
+        }
+        
+        // Update checkbox state
+        const checkbox = document.querySelector(`input[id*="${item}"]`);
+        if (checkbox) checkbox.checked = false;
+        
+        applyFilters();
+    }
+
+    // Apply all filters
+    function applyFilters() {
+        filteredApps = allApps.filter(app => {
+            // Search filter
+            if (searchTerm) {
+                const searchFields = [
+                    app.title?.toLowerCase() || '',
+                    app.description?.toLowerCase() || '',
+                    ...(app.tags || []).map(tag => tag.toLowerCase())
+                ].join(' ');
+                
+                if (!searchFields.includes(searchTerm)) {
+                    return false;
+                }
+            }
+
+            // Tags filter
+            if (selectedTags.size > 0) {
+                const appTags = app.tags || [];
+                const hasSelectedTag = Array.from(selectedTags).some(tag => appTags.includes(tag));
+                if (!hasSelectedTag) return false;
+            }
+
+            // Department filter
+            if (selectedDepartments.size > 0 && !selectedDepartments.has(app.department)) {
+                return false;
+            }
+
+            // Status filter
+            if (selectedStatuses.size > 0 && !selectedStatuses.has(app.status)) {
+                return false;
+            }
+
+            return true;
+        });
+
+        currentPage = 1;
+        updateDisplay();
+    }
+
+    // Update the display
+    function updateDisplay() {
+        updateResultsInfo();
+        renderApps();
+        renderPagination();
+    }
+
+    // Update results count and page info
+    function updateResultsInfo() {
+        const start = (currentPage - 1) * itemsPerPage + 1;
+        const end = Math.min(currentPage * itemsPerPage, filteredApps.length);
+        const total = filteredApps.length;
+        
+        document.getElementById('resultsCount').textContent = 
+            `Showing ${start}-${end} of ${total} applications`;
+    }
+
+    // Render applications grid
+    function renderApps() {
+        const grid = document.getElementById('appGrid');
+        const noResults = document.getElementById('noResults');
+        
+        if (filteredApps.length === 0) {
+            grid.style.display = 'none';
+            noResults.style.display = 'block';
+            return;
+        }
+        
+        grid.style.display = 'grid';
+        noResults.style.display = 'none';
+
+        const start = (currentPage - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const appsToShow = filteredApps.slice(start, end);
+
+        grid.innerHTML = appsToShow.map(app => `
+            <div class="card">
+                <div class="card-thumbnail">
+                    ${app.thumbnail ? 
+                        `<img src="${app.thumbnail}" alt="${app.title}" loading="lazy" onerror="this.parentElement.innerHTML='<span>📱</span>'">` : 
+                        '<span>📱</span>'
+                    }
+                </div>
+                <h3 class="card-title">${app.title}</h3>
+                <p class="card-description">${app.description}</p>
+                <div class="card-meta">
+                    <div class="card-tags">
+                        ${(app.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="card-info">
+                        <span>${app.department}</span>
+                        <span class="status ${app.status?.toLowerCase().replace(/\s+/g, '-')}">${app.status}</span>
+                    </div>
+                </div>
+                <a href="${app.url}" target="_blank" class="card-link" rel="noopener noreferrer">Visit Application</a>
+            </div>
+        `).join('');
+    }
+
+    // Render pagination
+    function renderPagination() {
+        const totalPages = Math.ceil(filteredApps.length / itemsPerPage);
+        const pagination = document.getElementById('pagination');
+        
+        if (totalPages <= 1) {
+            pagination.innerHTML = '';
+            return;
+        }
+
+        const maxVisiblePages = 7;
+        const startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+        const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+        let paginationHTML = `
+            <button ${currentPage === 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})">
+                &laquo; Previous
+            </button>
+        `;
+
+        if (startPage > 1) {
+            paginationHTML += `<button onclick="changePage(1)">1</button>`;
+            if (startPage > 2) {
+                paginationHTML += `<span>...</span>`;
+            }
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            paginationHTML += `
+                <button class="${i === currentPage ? 'current' : ''}" onclick="changePage(${i})">
+                    ${i}
+                </button>
+            `;
+        }
+
+        if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+                paginationHTML += `<span>...</span>`;
+            }
+            paginationHTML += `<button onclick="changePage(${totalPages})">${totalPages}</button>`;
+        }
+
+        paginationHTML += `
+            <button ${currentPage === totalPages ? 'disabled' : ''} onclick="changePage(${currentPage + 1})">
+                Next &raquo;
+            </button>
+        `;
+
+        pagination.innerHTML = paginationHTML;
+    }
+
+    // Change page
+    function changePage(page) {
+        const totalPages = Math.ceil(filteredApps.length / itemsPerPage);
+        if (page < 1 || page > totalPages) return;
+        
+        currentPage = page;
+        updateDisplay();
+        
+        // Scroll to top of results
+        document.querySelector('.results-info').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Change items per page
+    function changeItemsPerPage() {
+        itemsPerPage = parseInt(document.getElementById('itemsPerPage').value);
+        currentPage = 1;
+        updateDisplay();
+    }
+
+    // Initialize the app after DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        loadFromCSV();
+        updateCSVUrlDisplay();
+    });
+</script>
