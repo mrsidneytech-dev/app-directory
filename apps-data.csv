@@ -1,95 +1,212 @@
 id,title,description,thumbnail,url,tags,department,status
-1,1000 Mots CP/CE1,Supports learning French as a World Language,https://drive.google.com/thumbnail?id=13enNjKyNwUAweqqi_nxLs6-SP2YESJED&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/1000-mots-cp-ce1/id1302256878,French,World Languages;LAQ ,Not Installed
-2,3D Timeline,Create and Present Timelines,https://drive.google.com/thumbnail?id=1yDXQAzausmEMBTsVDtQfLwqdLVGUB1pz&sz=w{{130}}-h{{130}},https://apps.apple.com/au/app/timeline-3d/id1015123311,"UOI, History",Primary,Not Installed
-3,ABC Star - Letter Tracing,Learn to write the alphabet,https://drive.google.com/thumbnail?id=1V2frvMsp-tLy5iOgcQJHYgYbxvKrgNJO&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/abc-star-letter-tracing/id1252191274,Writing,Early Years,Active
-4,Adobe Spark Video,"Video Editor, Slideshow Maker",https://drive.google.com/thumbnail?id=1ZT_b5FD-p2KK_-GkI2qlElyTfBB_M2nP&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/adobe-spark-video/id852555131,Video,Primary;Design,Not Installed
-5,App Spelling Magic,Working with CVC words,https://drive.google.com/thumbnail?id=1Wg4eGRrfHgJPV11a0c_abFc6NOfC6qf7&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/abc-spelling-magic/id429301553,Spelling,Early Years,Not Installed
-6,Apple Swift Playgrounds,Learn real coding the fun way,https://drive.google.com/thumbnail?id=1V_drJg1TbaAdkoOoXlLTQlrNck8EJMnk&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/swift-playgrounds/id908519492,Coding,Primary,Active
-7,AR Makr,Augmented Reality Playground,https://drive.google.com/thumbnail?id=1dUsZDJiBr7JKP4ra0CrxwepGYDjmnxms&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/ar-makr/id1434081130,Design,Primary;Design,Active
-8,Autodesk:SketchBook,"Draw, paint & sketch anywhere",https://drive.google.com/thumbnail?id=1NE54sVRtVN2nIckjLcKsNx8Ay_gURo8U&sz=w{{130}}-h{{130}},https://apps.apple.com/in/app/autodesk-sketchbook/id883738213,Art,Primary;Design,Expired
-9,Beebots,"The App makes use of Bee-Bot’s key functionality and enables children to improve their skills in directional language, programming sequences of forwards, backwards, left and right 90 degree turns",https://drive.google.com/thumbnail?id=1896C_3Tt7buNjOOnb1lFReplGt2FMgOs&sz=w{{130}}-h{{130}},https://apps.apple.com/gb/app/bee-bot/id500131639,Coding,Early Years,Active
-10,Biome Viewer,BiomeViewer lets you explore and discover Earth’s ecosystems with a tap of your finger! ,https://drive.google.com/thumbnail?id=1bNRoVnSAMfp_nCQQb0GO0j77sgb4-rOi&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/biomeviewer/id1138439750,UOI,Primary,Active
-11,Book Creator,"With over 30 million ebooks created so far, Book Creator is ideal for making all kinds of books, including children's picture books, comic books, photo books, journals, textbooks and more.",https://drive.google.com/thumbnail?id=1bgbmByw8q4sN6USeaFxOmQOWxQeVM615&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/book-creator-for-ipad/id442378070,Literacy;Creation,Primary; L&L,Under Process
-12,Canva,"Graphic Design, Video, Logo, Card, Flyer and poster maker",https://drive.google.com/thumbnail?id=1fSqBfFWJcwD3vWQR91bzm0Qw8ipPmX5v&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/canva-graphic-design-video/id897446215,Design,Whole School,Active
-13,Chatterpix Kids,Make anything talk!,https://drive.google.com/thumbnail?id=1t2OeJL_aicbvI3PC1Urvd8o3u4wMjvaq&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/chatterpix-kids/id734046126,World Languages / LAQ ,Primary;Early Years,Active
-14,Clips,Video editor,https://drive.google.com/thumbnail?id=1Xc71Lru7sWYdRIvPH6PQlk4uN4wjgtSb&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/clips/id1212699939,Video,Primary,Active
-15,Code Karts,Pre-coding logic. Learn to think like a coder,https://drive.google.com/thumbnail?id=1U6wOHLPEvYqRipWCw_Y3txRUL-m52hms&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/code-karts-pre-coding-logic/id1222704761,Coding,Early Years,Active
-16,Codeapilar,"Helps teach sequnecing, problem solving, counting and more!",https://drive.google.com/thumbnail?id=1Ap7O28reonj4xrEmFDk0qRKqUjK1Idgk&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/think-learn-code-a-pillar/id1110815901,Coding,Early Years,Active
-17,codeSpark,Learn Coding and STEM for kids,https://drive.google.com/thumbnail?id=1glq700iFZBKVYDikOcYkO7nnH-RXMm_j&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/codespark-academy-kids-coding/id923441570,Coding,Primary,Active
-18,Cospaces Edu,Make AR & VR in the classroom,https://drive.google.com/thumbnail?id=1xV69qBmzNCqpCaGioj1BLT558lST4cZz&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/cospaces-edu/id1224622426,Coding,Primary,Purchased
-19,Daisy the Dinosaur,Learn the basics of coding with Daisy the Dinosaur!,https://drive.google.com/thumbnail?id=1eM4Xqu6XlbSnHudsHH1tRGDssAunhpXp&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/daisy-the-dinosaur/id490514278,Coding,Early Years,Active
-20,Edpuzzle,Make any video your lesson,https://drive.google.com/thumbnail?id=1-zcmp_jRBKeVGO4Q8-eYJcBmnor9fT8_&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/edpuzzle/id919598209,Video,Primary,Active
-21,Endless Reader ,Sight Words for Kids,https://drive.google.com/thumbnail?id=144WRZul1rNGFdAWepmnSQWDC150YxIEY&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/endless-reader/id722910739,Reading,Primary,Active
-22,Epic!,Library & Education for Kids,https://drive.google.com/thumbnail?id=11j8EeZ4scDWCxD_HxQmytteCpolB-Ubn&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/epic-kids-books-reading/id719219382,Reading,Primary,Active
-23,Excavate Egypt,Ancient Egyptian History,https://drive.google.com/thumbnail?id=1OQBYqDxexN7MQgxdsOaX0A3RuiMZnXap&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/excavate-egypt/id1319974709,UOI,Primary,Not Installed
-24,EyeJack,AR Creator - Hijack your reality,https://drive.google.com/thumbnail?id=1QYa6Ho4XptFlmBFtvJDIyEHTf-bYo2zp&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/eyejack/id1163248223,Design,Primary;Design,Not Installed
-25,Face Sketch,Sketch your portrait ,https://drive.google.com/thumbnail?id=1zP-VJqw6ly1IAjh5Yh_kac5N1SqO_rAb&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/face-sketch/id1016231968,Art,Primary;Visual Arts,Not Installed
-26,Flipgrid,Empower every voice,https://drive.google.com/thumbnail?id=16rHp2XmoPKSYcrirh2a_qm5HnOYWwX8c&sz=w{{130}}-h{{130}},https://apps.apple.com/bn/app/flipgrid/id756972930,Video,Primary,Expired
-27,Foldify,Creating 3D Objects,https://drive.google.com/thumbnail?id=1KLwZpyuC0GAO8Sunz6F_IrABVKPRmAZv&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/foldify-create-print-fold/id527118971,Design,Primary;Design,Not Installed
-28,Google Earth,Gain a new perspective,https://drive.google.com/thumbnail?id=1RmMTO9NnCEUMkVdIMC9-GbR5CXiVxJ8s&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/google-earth/id293622097,Geography; Maps,Primary;I&S,Active
-29,Google Maps,"GPS, City Navigation & Traffic",https://drive.google.com/thumbnail?id=1ddYRqgqpEGAcy9tHj1zTc4mALplBHZWG&sz=w{{130}}-h{{130}},https://apps.apple.com/mz/app/google-maps-transit-food/id585027354,Geography; Maps,Primary;I&S,Active
-30,Google Sheets,"Open, Edit & Share Spreadsheet",https://drive.google.com/thumbnail?id=1-PamuTlt1HZJ9bwKQJY58WGIAO8Al00U&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/google-sheets/id842849113,Data Handling,Primary;Mathematics,Active
-31,Google Street View,Explore the world in 360 imagery,https://drive.google.com/thumbnail?id=1pOR8yY8KdD6q9q5zcWPj5Bmkr49Isbi6&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/google-street-view/id904418768,Geography; Maps,Primary;I&S,Active
-32,Green Screen by Do Ink,Create to show what you know!,https://drive.google.com/thumbnail?id=1wkrcmF9cpAbIu1vhYw_KFBnLkCK9Mkmx&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/green-screen-by-do-ink/id730091131,Video,Primary,Expired
-33,Hay Day,Farm with Friends and Family,https://drive.google.com/thumbnail?id=1_o_3yUnmYbmxL9CphjLx5bmEOHlGM_nh&sz=w{{130}}-h{{130}},https://apps.apple.com/in/app/hay-day/id506627515,UOI,Primary,Not Installed
-34,Holiday Jams,Song creator for young learners,https://drive.google.com/thumbnail?id=1Ju4UnP7nrGc1SRStMgDJSKWrVITMy5iq&sz=w{{130}}-h{{130}},https://apps.apple.com/lu/app/holiday-jams/id1170282497,Music,Primary;Music,Not Installed
-35,iMovie,Turn videos into movie magic,https://drive.google.com/thumbnail?id=1tfdxiHwUUflmcFr2qRL9sL7T9l30SwQH&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/imovie/id377298193,Video,Primary,Active
-36,IXL,Maths Learning on the go,https://drive.google.com/thumbnail?id=1zw9f8ahqwr7fRFS-Rd3slHl7tZP0tdX-&sz=w{{130}}-h{{130}},https://apps.apple.com/mw/app/ixl-maths-and-english/id693689912,Mathematics,Primary;Mathematics,Purchased
-37,Jig Workshop,From CAD to AR in seconds,https://drive.google.com/thumbnail?id=1lD48Lnj3F1VmPhbHLHnC2Nq9YtvDocCk&sz=w{{130}}-h{{130}},https://apps.apple.com/in/app/jig-workshop/id1225065243,Design,Primary;Design,Not Installed
-38,JigSpace,We learn better in 3D!,https://drive.google.com/thumbnail?id=1nS4uLof06cWIt5aqB9w31I-aq84Q7WC8&sz=w{{130}}-h{{130}},https://apps.apple.com/ai/app/jigspace/id1111193492,Design,Primary;Design,Not Installed
-39,Junior Safesearch,Child friendly search engine for the iPad,https://drive.google.com/thumbnail?id=1m8qcFNhQn-j7vOcyZy2tb_di7wPEGNR4&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/junior-search/id1063011792,UOI; Search,Primary,Expired
-40,K-5 Splash Maths,Fun Learning Games for Kids,https://drive.google.com/thumbnail?id=1GnVGZMSCJTOkxilEBqSV_W4gzIwmMAer&sz=w{{130}}-h{{130}},https://apps.apple.com/do/app/k-5-splash-math-games-for-kids/id672658828?l=en,Mathematics,Primary;Mathematics,Not Installed
-41,Kahoot,Play & Create Quizzes,https://drive.google.com/thumbnail?id=1jz-aB0CwF0LXAUZJ7-3UdTKDep3mmQ35&sz=w{{130}}-h{{130}},https://apps.apple.com/app/kahoot-play-create-quizzes/id1131203560,Quiz,Primary,Active
-42,Kaligo,Handwriting,https://drive.google.com/thumbnail?id=1qdiUueMMO2WEyJjsMQDjfOU7BplfB7SH&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/kaligo-school/id1345325412,Writing,Early Years,Not Installed
-43,Khan Kids,Fun educational games & books,https://drive.google.com/thumbnail?id=1VyWW022xG43rmjg9z71bBoo1ptkOnW3i&sz=w{{130}}-h{{130}},https://apps.apple.com/ni/app/khan-academy-kids/id1378467217?l=en,Mathematics,Primary;Mathematics,Not Installed
-44,Kids A-Z,Leveled Reading Books,https://drive.google.com/thumbnail?id=1EhgrbLT3hpXsCp8alB6mRAd1nNDZWydu&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/kids-a-z/id474207297,Reading,Primary,Purchased
-45,Kodable,Coding for Early Years,https://drive.google.com/thumbnail?id=1WQSDQaSKvFJsPagnSieea5jehSDlB2sG&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/kodable/id577673067,Coding,Early Years,Active
-46,Learning Patterns - Pattern & Logic Game for Kids,Help Kids Develop Critical Thinking and Pattern Recognition Skills,https://drive.google.com/thumbnail?id=1YOiFPkViiZZcuKcDqmY3KC-I4hzAkDF0&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/learning-patterns-pro-help-kids-develop-critical-thinking/id880549013,Mathematics,Primary;Mathematics,Not Installed
-47,Lego Creator,The digital building companion,https://drive.google.com/thumbnail?id=1inZ3fd8NbI62sKVprKcD4htuN9yGbn2_&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/lego-building-instructions/id1486159728,UOI,Primary,Not Installed
-48,Letter School,ABC handwriting app for kids,https://drive.google.com/thumbnail?id=1-uGNXr-Yya_RpoUP_ve81kvBNIw18Nkv&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/letterschool-learn-to-write/id481067676,Writing,Early Years,Not Installed
-49,MakerEmpire 3D,Fun and easy 3D design tool,https://drive.google.com/thumbnail?id=1LOzoNAwtJoa3YADa9xi3r7r22ZZrDVb8&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/makers-empire-3d-3d-modeling/id867338125,UOI,Primary,Not Installed
-50,Micro:bit,"The micro:bit app is the essential companion to the BBC micro:bit, the pocket sized programmable computer.",https://drive.google.com/thumbnail?id=1-UPl_liTvCvf06jMwFq28JZzBLgXLYzX&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/true/id1092687276?platform=ipad&preserveScrollPosition=true,Coding,Primary;Design,Not Installed
-51,MINDSTORMS EV3 Lego Education,"Try More, Discover More",https://drive.google.com/thumbnail?id=1-AKD5i1j_EL7VhJpefnxUql2ySu_JgQC&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/mindstorms-ev3-lego-education/id959374369,Coding,Primary;Design,Not Installed
-52,Moose Math,A Math Game for Kids!,https://drive.google.com/thumbnail?id=1Kw3XJ-rRN_ezWOhrflwJTG7Jhxtctniq&sz=w{{130}}-h{{130}},https://apps.apple.com/bh/app/moose-math-duck-duck-moose/id660345152,Mathematics,Primary;Mathematics,Not Installed
-53,MotionBook,Best Flipbook Animation Maker,https://drive.google.com/thumbnail?id=1p4_odPzBN9tlhsyjg2L_NJuUvDEz4P13&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/motionbook-draw-animate/id1350671732,Art,Primary;Visual Arts,Expired
-54,Night Sky,Guide to the Sky Above,https://drive.google.com/thumbnail?id=1VKVYyRTk49L8GboCYz8ZmK26hJyI-9gC&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/night-sky/id475772902,Geography,Primary;I&S,Not Installed
-55,Number Frames,A Math Learning Center tool,https://drive.google.com/thumbnail?id=1VC8yAE420XqbTSS2JL--BLxiY2qPlk6n&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/number-frames-by-mlc/id873198123,Mathematics,Primary;Mathematics,Active
-56,Numbots,Addition & subtraction,https://drive.google.com/thumbnail?id=1QeUJXrAUIgk5h1kyZm_DWq0JnPoZIbm-&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/numbots/id1448844836,Mathematics,Primary;Mathematics,Not Installed
-57,Oz Phonics,"Phonemic Awareness, Letters",https://drive.google.com/thumbnail?id=1amMlmVuXoVBEF4Bh5RsM4WBiduI4idZZ&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/oz-phonics-1/id580335894,Phonics,Primary;L&L,Not Installed
-58,Padlet,Collaboratation Board,https://drive.google.com/thumbnail?id=1qIL9vpT2TnyJ3a2QEuIaMDsGGK0RexV9&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/padlet/id834618886,UOI,Primary,Purchased
-59,Paper by WeTransfer,Sketch with confidence,https://drive.google.com/thumbnail?id=1NU7nEWRQ0GfiFTdrNgerwkeO7-J1mdoL&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/paper-by-wetransfer/id506003812,Art,Primary;Visual Arts,Not Installed
-60,Pigment,A Fun Coloring & Painting App,https://drive.google.com/thumbnail?id=1Z95BXoUbhtstLSjsi0HlyHcUoIpO_z8Y&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/pigment-adult-coloring-book/id1062006344,Art,Primary;Visual Arts,Not Installed
-61,Pinkfong ABC Phonics,"Songs, Tracing and Games!",https://drive.google.com/thumbnail?id=1E9X_jKD5sHuK6xoJh3WNpnmqeNDDuFLO&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/pinkfong-abc-phonics/id875193091,Phonics,Primary;L&L,Not Installed
-62,Pixabay,Stock images and videos,https://drive.google.com/thumbnail?id=1Ih4CYYYgFeXi-2bemItu1umMfhIxikvJ&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/pixabay/id1178021455,Design,Primary;Design,Not Installed
-63,Place value MAB,Place Value with Cubes,https://drive.google.com/thumbnail?id=1j-zHlNzHdFi13_1N9Las8MU5qzGM_6PD&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/place-value-mab/id507890987,Mathematics,Primary;Mathematics,Not Installed
-64,Place value MAB Addition,Addition with Cubes,https://drive.google.com/thumbnail?id=1BikJzm3t6pRIaoldOhNF_OseJGuvfrNL&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/place-value-mab-addition/id541881278,Mathematics,Primary;Mathematics,Not Installed
-65,Post-it,Brainstorm. Capture. Share.,https://drive.google.com/thumbnail?id=1A3cxv3VuxKm0YB7uRiQHzfOzlMzSTecj&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/post-it/id920127738,Productivity,Primary;PHE,Active
-66,Prodigy,Math practice for grades 1-8,https://drive.google.com/thumbnail?id=15aZZ3mKrt-zMg1sH33Qnwu1XihX1-4sy&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/prodigy-kids-math-game/id950795722,Mathematics,Primary;Mathematics,Not Installed
-67,Puppet Pals 2,Puppet Pals is an amazing app that lets you create animated cartoons,https://drive.google.com/thumbnail?id=1oDGEc16nnsdwGGvs8etpW6m7hlv_Wng4&sz=w{{130}}-h{{130}},https://apps.apple.com/gr/app/puppet-pals-2-school-edition/id557616416,UOI,Primary,Expired
-68,Quick Family Tree,Easily make it with a tap.,https://drive.google.com/thumbnail?id=10nYns-z74Qki8UbKKuJ89XQBIfoMbK2n&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/quick-family-tree/id1447075049,UOI,Primary,Not Installed
-69,Quik,"Edit photos, videos to music",https://drive.google.com/thumbnail?id=1Zyq-E_mIGDkplWs3PnNgRelzcgQaPTXx&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/quik-gopro-video-editor/id694164275,Video,Primary,Not Installed
-70,Quizizz,Quizzes that engage everyone,https://drive.google.com/thumbnail?id=1mqeEYmegnjjIG4hEjP44gvUMsZfIuJlZ&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/quizizz-play-to-learn/id1160249042,Quiz,Primary,Active
-71,Reality Composer,Build Augmented Reality,https://drive.google.com/thumbnail?id=1fCrjLwHsjk5dPJ8BEeKdbdAzkcZ41I70&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/reality-composer/id1462358802,AR,Primary;Design,Not Installed
-72,Scratch Jr,"With ScratchJr, young children (ages 5-7) learn important new skills as they program their own interactive stories and games.",https://drive.google.com/thumbnail?id=1Fqkx7lsCv752PJ4EwuM7j2vSgEmo7OjU&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/scratchjr/id895485086,Coding,Primary,Active
-73,Seesaw,PYP Class Portfolio,https://drive.google.com/thumbnail?id=1hncaB2WDSmJvFu9yY4gdqVaskAeP5Myj&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/seesaw-class/id930565184,Management;Whiteboard,Primary,Purchased
-74,ShowMe,Interactive Whiteboard,https://drive.google.com/thumbnail?id=19FjVU0eDjT1C2FxnLga9D18XdnpYt3oV&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/showme-interactive-whiteboard/id445066279,Whiteboard,Primary,Not Installed
-75,Sight Word SB,Sight Words Learning Games & Reading Flash Cards,https://drive.google.com/thumbnail?id=1ioQWC685u7WrR_e2nFdo2UTykBiyxnXc&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/sight-words-learning-games-reading-flash-cards/id518258478,Phonics,Primary,Not Installed
-76,Simplex Spelling Phonics CVC,Scientifically validated as a highly effective approach to improving spelling skills through our phonics approach,https://drive.google.com/thumbnail?id=19EoJF3OSFghknv2tqwJdZK3XjQRjSCgg&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/simplex-spelling-phonics-1/id481553580,Phonics,Primary,Not Installed
-77,Sketchbook Motion,Bring life to your images.,https://drive.google.com/thumbnail?id=1yAxGp5pc3NJuQlWt2w-N32suNqn1ap5q&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/sketchbook-motion/id1061224933,Art,Primary;Visual Arts,Not Installed
-78,Smithsonian,Virtual Tours of the Smithsonian Musuem ,https://drive.google.com/thumbnail?id=18QRapRZaSk_Yqg1Vskh7Urna7JMfN8Ln&sz=w{{130}}-h{{130}},https://apps.apple.com/in/app/smithsonian-mobile/id457046192,History,Primary;I&S,Not Installed
-79,Sphero Edu,Coding for Sphero Robots,https://drive.google.com/thumbnail?id=1Ws2QvWTBzD6ZDRNaie5UvDYBZoIegVpD&sz=w{{130}}-h{{130}},https://apps.apple.com/in/app/sphero-edu/id1017847674,Coding,Primary,Not Installed
-80,Stop Motion Studio,Let's Make a Movie.,https://drive.google.com/thumbnail?id=1gsD27QwexIkIKXUJ5Oghvpu5U1EN9y9Z&sz=w{{130}}-h{{130}},https://apps.apple.com/ao/app/stop-motion-studio/id441651297,Video,Primary,Not Installed
-81,Storyboard Animator,Storyboards & view animatics,https://drive.google.com/thumbnail?id=1b5J33_w0SLjEJzqGxxtIZA6g0MpsF5JY&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/storyboard-animator/id1326518944,Video,Primary,Not Installed
-82,Sushi Monster,"A game to practice, reinforce, and extend math fact fluency is completely engaging and appropriately challenging.",https://drive.google.com/thumbnail?id=19HFBBIO5R4ywtMZrSkpvzcR8KLNTO3xA&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/sushi-monster/id512651258,Maths,Primary,Not Installed
-83,Sworkit Kids,PE Activities for kids,https://drive.google.com/thumbnail?id=1a1D-le1ztrACMn_PHDr6sLMo6AKpQPu2&sz=w{{130}}-h{{130}},https://apps.apple.com/eg/app/sworkit-kids/id1043023032,PE,Primary,Not Installed
-84,Tayasui Sketches School,Beautiful drawing tools,https://drive.google.com/thumbnail?id=1Jvi_5Cc-7DSZdf7bJL-9acFy6OzQFOcs&sz=w{{130}}-h{{130}},https://apps.apple.com/by/app/tayasui-sketches-school/id1354087061,Art,Primary;Visual Arts,Expired
-85,Thinglink,"Immersive storytelling for everyone: Easily augment photos with text, audio, closeup photos, links, and video.",https://drive.google.com/thumbnail?id=1OFdyQiTcCtUvZEntZyrTEzQwZJY2bwgU&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/thinglink/id647304300,Presentation,Primary,Expired
-86,Time Bingo,Fun Maths game to help with time,https://drive.google.com/thumbnail?id=1_25WXraavXmFiS15R0ntum_ir1PnjH62&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/time-bingo/id604348508,Mathematics,Primary;Mathematics,Not Installed
-87,TimesTable Rockstars,Times Tables Rock Stars is a carefully sequenced programme of daily times tables practice aimed at schools.,https://drive.google.com/thumbnail?id=1XeEvlqAHB0I0usxjPUW-4hvFj88qm8Vm&sz=w{{130}}-h{{130}},https://apps.apple.com/qa/app/times-tables-rock-stars/id973811326,Mathematics,Primary;Mathematics,Not Installed
-88,Tinytap,Teacher Made Educational Games,https://drive.google.com/thumbnail?id=1t8aOFJNVNchBJ-yNc4ZRJvDOSEdJcNd6&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/tinytap-kids-learning-games/id493868874,Early Years,Primary,Not Installed
-89,Toontastic HD,"With Toontastic 3D you can draw, animate, and narrate your own cartoons.",https://drive.google.com/thumbnail?id=1a0R1o2i5EKpP_XAFc2XInfmjU3M0xdVb&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/toontastic-3d/id1145104532,Video,Primary,Expired
-90,Tynker,Tynker is the #1 Kids Coding platform! Over 60 million kids and thousands of schools use Tynker's award-winning curriculum to learn to code!,https://drive.google.com/thumbnail?id=12ijfJs-FBjhVH65bbNkLuS_GikOZBns5&sz=w{{130}}-h{{130}},https://apps.apple.com/my/app/tynker-coding-games-for-kids/id805869467,Coding,Primary,Active
-91,Tynker Jr,Even pre-readers can learn to code with Tynker Junior!,https://drive.google.com/thumbnail?id=1GQ-tpTMRZnaWsSGCk0h99YI8nZrqA-DK&sz=w{{130}}-h{{130}},https://apps.apple.com/cy/app/tynker-junior/id1393933000,Coding,Primary;Early Years,Active
-92,Wet-Dry-Try Handwriting,Writing Letters & Numbers,https://drive.google.com/thumbnail?id=1NO1tDpjUJDwQr2XMz8voiaQJ6bl1JcqF&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/wet-dry-try-handwriting/id1527186072,Handwriting,Primary;Early Years,Active
-93,World Atlas,"Barefoot World Atlas is a magical, interactive 3D globe that invites children to explore the regions and countries of the world, discovering hundreds of fascinating features and immersing themselves in the rich wonders of our planet. ",https://drive.google.com/thumbnail?id=1AYzaQm_iRiV3lEkUUqK0brt_Fkcx6Fwb&sz=w{{130}}-h{{130}},https://apps.apple.com/ca/app/barefoot-world-atlas/id489221652,Geography,Primary;I&S,Not Installed
-94,Zoom,"Zoom is a reliable tool for meetings with 100+ people, with built-in call recording, text chat, and screen sharing. It even scales video quality to avoid dropped calls.",https://drive.google.com/thumbnail?id=1dBDdXTR00FVYoUn9gQPMLnBVTrBHWG-z&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/zoom-cloud-meetings/id546505307,Video,Whole School,Not Installed
+1,3D-Anatomy,,,,,PHE,Active (Purchased)
+2,ABC Star - Letter Tracing,Learn to write the alphabet,https://drive.google.com/thumbnail?id=1V2frvMsp-tLy5iOgcQJHYgYbxvKrgNJO&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/abc-star-letter-tracing/id1252191274,Writing,Early Years,Active (Free)
+3,Academia,,,,,Performing Arts,Active (Purchased)
+4,Active History,,,,,I&S,Active (Purchased)
+5,Adobe Photoshop,,,,,Visual Arts,Being Purchased
+6,Apple Swift Playgrounds,Learn real coding the fun way,https://drive.google.com/thumbnail?id=1V_drJg1TbaAdkoOoXlLTQlrNck8EJMnk&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/swift-playgrounds/id908519492,Coding,Primary,Active (Free)
+7,AR Makr,Augmented Reality Playground,https://drive.google.com/thumbnail?id=1dUsZDJiBr7JKP4ra0CrxwepGYDjmnxms&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/ar-makr/id1434081130,Design,"Primary, Design",Active (Free)
+8,ASCD (Association for Supervision and Curriculum Development),,,,,Primary,Being Purchased
+9,Assessprep Plus,,,,,Whole Secondary,Active (Purchased)
+10,Autodesk:SketchBook,"Draw, paint & sketch anywhere",https://drive.google.com/thumbnail?id=1NE54sVRtVN2nIckjLcKsNx8Ay_gURo8U&sz=w{{130}}-h{{130}},https://apps.apple.com/in/app/autodesk-sketchbook/id883738213,Art,Primary;Design,Expired
+11,Avid ProTools,,,,,Performing Arts,Being Purchased
+12,Bamboozle,,,,,Primary,Being Purchased
+13,Bamboozle,,,,,LAQ,Active (Purchased)
+14,BeanStack,,,,,L&L,Active (Purchased)
+15,Beebots,"The App makes use of Bee-Bot’s key functionality and enables children to improve their skills in directional language, programming sequences of forwards, backwards, left and right 90 degree turns",https://drive.google.com/thumbnail?id=1896C_3Tt7buNjOOnb1lFReplGt2FMgOs&sz=w{{130}}-h{{130}},https://apps.apple.com/gb/app/bee-bot/id500131639,Coding,Early Years,Active (Free)
+16,Big Universe,,,,,"Primary Library, Primary",Active (Purchased)
+17,Biome Viewer,BiomeViewer lets you explore and discover Earth’s ecosystems with a tap of your finger! ,https://drive.google.com/thumbnail?id=1bNRoVnSAMfp_nCQQb0GO0j77sgb4-rOi&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/biomeviewer/id1138439750,UOI,Primary,Active (Free)
+18,Bloomberg,,,,,I&S,Active (Purchased)
+19,Book Creator,"With over 30 million ebooks created so far, Book Creator is ideal for making all kinds of books, including children's picture books, comic books, photo books, journals, textbooks and more.",https://drive.google.com/thumbnail?id=1bgbmByw8q4sN6USeaFxOmQOWxQeVM615&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/book-creator-for-ipad/id442378070,Literacy;Creation,"Primary, L&L",Being Purchased
+20,Booked Scheduler,,,,,Whole Primary,Active (Purchased)
+21,BrainPop & BrainPop Jr,,,,,Primary Library;Primary,Active (Purchased)
+22,Britannica Kids,,,,,Primary Library,Active (Purchased)
+23,Britannica School,,,,,Secondary Library,Active (Purchased)
+24,Canva,"Graphic Design, Video, Logo, Card, Flyer and poster maker",https://drive.google.com/thumbnail?id=1fSqBfFWJcwD3vWQR91bzm0Qw8ipPmX5v&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/canva-graphic-design-video/id897446215,Design,Whole School,Active (Free)
+25,Canva,,,,,Communications,Active (Purchased)
+26,Cardiography,,,,,PHE,Active (Purchased)
+27,Chatterpix Kids,Make anything talk!,https://drive.google.com/thumbnail?id=1t2OeJL_aicbvI3PC1Urvd8o3u4wMjvaq&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/chatterpix-kids/id734046126,World Languages / LAQ ,Primary; Early Years,Active (Free)
+28,Cialfo,,,,,College Counselor,Active (Purchased)
+29,Cialfo,,,,,College Counselor,Active (Purchased)
+30,CLEAPSS,,,,,Secondary Science,Active (Purchased)
+31,Clips,Video editor,https://drive.google.com/thumbnail?id=1Xc71Lru7sWYdRIvPH6PQlk4uN4wjgtSb&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/clips/id1212699939,Video,Primary,Active (Free)
+32,"Code Guppy: New: Illustrated JavaScript Coding Course
+by Adrian",,,,,Design,Being Purchased
+33,Code Karts,Pre-coding logic. Learn to think like a coder,https://drive.google.com/thumbnail?id=1U6wOHLPEvYqRipWCw_Y3txRUL-m52hms&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/code-karts-pre-coding-logic/id1222704761,Coding,Early Years,Active (Free)
+34,Codeapilar,"Helps teach sequnecing, problem solving, counting and more!",https://drive.google.com/thumbnail?id=1Ap7O28reonj4xrEmFDk0qRKqUjK1Idgk&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/think-learn-code-a-pillar/id1110815901,Coding,Early Years,Active (Free)
+35,codeSpark,Learn Coding and STEM for kids,https://drive.google.com/thumbnail?id=1glq700iFZBKVYDikOcYkO7nnH-RXMm_j&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/codespark-academy-kids-coding/id923441570,Coding,Primary,Active (Free)
+36,College Board Membership Fee,,,,,College Counselor,Active (Purchased)
+37,Cospaces Edu,Make AR & VR in the classroom,https://drive.google.com/thumbnail?id=1xV69qBmzNCqpCaGioj1BLT558lST4cZz&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/cospaces-edu/id1224622426,Coding,Primary,Active (Purchased)
+38,CoSpaces EDU + Merge Cube Addon,,,,,Primary,Active (Purchased)
+39,CPOMS,,,,,Whole School,Active (Purchased)
+40,Daisy the Dinosaur,Learn the basics of coding with Daisy the Dinosaur!,https://drive.google.com/thumbnail?id=1eM4Xqu6XlbSnHudsHH1tRGDssAunhpXp&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/daisy-the-dinosaur/id490514278,Coding,Early Years,Active (Free)
+41,Digital Theatre Plus,,,,,Performing Arts,Active (Purchased)
+42,Edpuzzle,Make any video your lesson,https://drive.google.com/thumbnail?id=1-zcmp_jRBKeVGO4Q8-eYJcBmnor9fT8_&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/edpuzzle/id919598209,Video,Primary,Active (Free)
+43,EdVal Choice,,,,,Whole Secondary,Active (Purchased)
+44,Edval Daily,,,,,Whole School,Active (Purchased)
+45,Edval Daily,,,,,Whole Primary,Active (Purchased)
+46,Edval Timetable,,,,,Whole School,Active (Purchased)
+47,Endless Reader ,Sight Words for Kids,https://drive.google.com/thumbnail?id=144WRZul1rNGFdAWepmnSQWDC150YxIEY&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/endless-reader/id722910739,Reading,Primary,Active (Free)
+48,Epic!,Library & Education for Kids,https://drive.google.com/thumbnail?id=11j8EeZ4scDWCxD_HxQmytteCpolB-Ubn&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/epic-kids-books-reading/id719219382,Reading,Primary,Active (Free)
+49,Exammate,,,,,Mathematics,Being Purchased
+50,Fitnessgram,,,,,Primary,Expired
+51,Flint AI K-12,,,,,Secondary Library,Active (Purchased)
+52,Flipgrid,Empower every voice,https://drive.google.com/thumbnail?id=16rHp2XmoPKSYcrirh2a_qm5HnOYWwX8c&sz=w{{130}}-h{{130}},https://apps.apple.com/bn/app/flipgrid/id756972930,Video,Primary,Expired
+53,Focus Learning,,,,,Design,Active (Purchased)
+54,Focus on Sound,,,,,Performing Arts,Being Purchased
+55,Follet Destiny Library,,,,,Primary Library; Primary ,Active (Purchased)
+56,Follet Destiny Question Bank - Bio / Chem / Physics,,,,,Science,Active (Purchased)
+57,Follet Destiny Question Bank - ESS,,,,,Science,Active (Purchased)
+58,Follet Destiny Question Bank - History,,,,,I&S,Active (Purchased)
+59,Follet Destiny Question Bank - Mathematics,,,,,Mathematics,Active (Purchased)
+60,Follet Destiny Question Bank - Psychology,,,,,I&S,Active (Purchased)
+61,Follet Destiny Question Bank - Sports Exercise,,,,,PHE,Active (Purchased)
+62,Follet Destiny Question Bank: Business and Economics Pack,,,,,I&S,Active (Purchased)
+63,Follett Destiny Library,,,,,Secondary Library,Active (Purchased)
+64,Foreign Affairs,,,,,I&S,Active (Purchased)
+65,Frenchteacher.net,,,,,LAQ,Active (Purchased)
+66,Gale Database - Gale in Context: Global Issues,,,,,Secondary Library,Active (Purchased)
+67,Gale Database - Gale In Context: Middle School,,,,,Secondary Library,Active (Purchased)
+68,Gale in Context: Science,,,,,Secondary Library,Active (Purchased)
+69,Gizmos,,,,,Science,Active (Purchased)
+70,Google Earth,Gain a new perspective,https://drive.google.com/thumbnail?id=1RmMTO9NnCEUMkVdIMC9-GbR5CXiVxJ8s&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/google-earth/id293622097,Geography; Maps,Primary;I&S,Active (Free)
+71,Google Maps,"GPS, City Navigation & Traffic",https://drive.google.com/thumbnail?id=1ddYRqgqpEGAcy9tHj1zTc4mALplBHZWG&sz=w{{130}}-h{{130}},https://apps.apple.com/mz/app/google-maps-transit-food/id585027354,Geography; Maps,Primary;I&S,Active (Free)
+72,Google Sheets,"Open, Edit & Share Spreadsheet",https://drive.google.com/thumbnail?id=1-PamuTlt1HZJ9bwKQJY58WGIAO8Al00U&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/google-sheets/id842849113,Data Handling,Primary;Mathematics,Active (Free)
+73,Google Street View,Explore the world in 360 imagery,https://drive.google.com/thumbnail?id=1pOR8yY8KdD6q9q5zcWPj5Bmkr49Isbi6&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/google-street-view/id904418768,Geography; Maps,Primary;I&S,Active (Free)
+74,Goosechase EDU,,,,,Secondary Library,Active (Purchased)
+75,GradeScope (Grades 6-12),,,,,Secondary Library,Expired
+76,Green Screen by Do Ink,Create to show what you know!,https://drive.google.com/thumbnail?id=1wkrcmF9cpAbIu1vhYw_KFBnLkCK9Mkmx&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/green-screen-by-do-ink/id730091131,Video,Primary,Expired
+77,Harvard Business Review,,,,,I&S,Active (Purchased)
+78,Heyzine,,,,,Communications,Active (Purchased)
+79,Hodder Economic Review eLibrary,,,,,I&S,Active (Purchased)
+80,Hodder Psychology Review eLibrary,,,,,I&S,Active (Purchased)
+81,i-Muscle,,,,,PHE,Active (Purchased)
+82,IB Business Management Paper 3 (HL only) Exams Pack,,,,,I&S,Being Purchased
+83,IB English Guys,,,,,L&L,Being Purchased
+84,IB Taskmaker,,,,,Mathematics,Active (Purchased)
+85,IBBusinessManagement.COM - Vibe Education,,,,,I&S,Being Purchased
+86,Illini - French,,,,,LAQ,Active (Purchased)
+87,iMovie,Turn videos into movie magic,https://drive.google.com/thumbnail?id=1tfdxiHwUUflmcFr2qRL9sL7T9l30SwQH&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/imovie/id377298193,Video,Primary,Active (Free)
+88,Infobase: CredoSource - Addon,,,,,Secondary Library,Expired
+89,Infobase: Science and Modern World History,,,,,Secondary Library,Active (Purchased)
+90,Insert Learning,,,,,LAQ,Being Purchased
+91,International Association for College Admission Counseling (IACAC),,,,,College Counselor,Active (Purchased)
+92,Inthinking - MYP L&L Resources,,,,,L&L,Active (Purchased)
+93,Inthinking DP English A,,,,,L&L,Active (Purchased)
+94,Inthinking French B,,,,,LAQ,Active (Purchased)
+95,Inthinking Maths A&A,,,,,Mathematics,Active (Purchased)
+96,Inthinking Maths A&I,,,,,Mathematics,Active (Purchased)
+97,Inthinking Spanish AB Ignito,,,,,LAQ,Active (Purchased)
+98,Inthinking Spanish B,,,,,LAQ,Active (Purchased)
+99,Inthinking Spanish MYP,,,,,LAQ,Active (Purchased)
+100,InThinking: Biology,,,,,Science,Active (Purchased)
+101,Inthinking: Business Management,,,,,I&S,Active (Purchased)
+102,InThinking: Chemistry,,,,,Science,Active (Purchased)
+103,InThinking: Computer Science,,,,,Design,Being Purchased
+104,InThinking: Design,,,,,Design,Being Purchased
+105,Inthinking: Economics,,,,,I&S,Active (Purchased)
+106,InThinking: ESS,,,,,Science,Active (Purchased)
+107,InThinking: Global Politics,,,,,I&S,Active (Purchased)
+108,Inthinking: History,,,,,I&S,Active (Purchased)
+109,InThinking: Physics,,,,,Science,Active (Purchased)
+110,InThinking: Psychology,,,,,I&S,Active (Purchased)
+111,Inthinking: Visual Arts,,,,,Visual Arts,Active (Purchased)
+112,IXL,Maths Learning on the go,https://drive.google.com/thumbnail?id=1zw9f8ahqwr7fRFS-Rd3slHl7tZP0tdX-&sz=w{{130}}-h{{130}},https://apps.apple.com/mw/app/ixl-maths-and-english/id693689912,Mathematics,Primary;Mathematics,Active (Purchased)
+113,IXL Maths,,,,,Primary,Active (Purchased)
+114,Jeopardy Labs,,,,,LAQ,Being Purchased
+115,JSTOR,,,,,Secondary Library,Active (Purchased)
+116,Junior Safesearch,Child friendly search engine for the iPad,https://drive.google.com/thumbnail?id=1m8qcFNhQn-j7vOcyZy2tb_di7wPEGNR4&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/junior-search/id1063011792,UOI; Search,Primary,Expired
+117,Kahoot,Play & Create Quizzes,https://drive.google.com/thumbnail?id=1jz-aB0CwF0LXAUZJ7-3UdTKDep3mmQ35&sz=w{{130}}-h{{130}},https://apps.apple.com/app/kahoot-play-create-quizzes/id1131203560,Quiz,Primary,Active (Free)
+118,Kami,,,,,LAQ,Being Purchased
+119,Kids A-Z,Leveled Reading Books,https://drive.google.com/thumbnail?id=1EhgrbLT3hpXsCp8alB6mRAd1nNDZWydu&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/kids-a-z/id474207297,Reading,Primary,Active (Purchased)
+120,Kodable,Coding for Early Years,https://drive.google.com/thumbnail?id=1WQSDQaSKvFJsPagnSieea5jehSDlB2sG&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/kodable/id577673067,Coding,Early Years,Active (Free)
+121,LabQuest Mini (Model 2),,,,,PHE,Being Purchased
+122,Labster,,,,,Science,Expired
+123,LAC,,,,,Whole School,Active (Purchased)
+124,Language gym,,,,,LAQ,Active (Purchased)
+125,Learning A-Z: Raz Kids,,,,,Primary,Active (Purchased)
+126,Learning A-Z: Raz Plus,,,,,Primary,Active (Purchased)
+127,"Level 7 Business Management Pack of units 1,2,3,4,5",,,,,I&S,Active (Purchased)
+128,Level 7 Education Case study Paper 1 (By Paul Hoang),,,,,I&S,Active (Purchased)
+129,Light Burn,,,,,Design,Active (Purchased)
+130,Linguascope,,,,,Primary,Being Purchased
+131,Litchart A+,,,,,L&L,Active (Purchased)
+132,Logic Pro,,,,,Performing Arts,Active (Purchased)
+133,Magic School AI,,,,,Primary,Expired
+134,Managebac,,,,,Whole School,Active (Purchased)
+135,Managebac Passport,,,,,High School,Active (Purchased)
+136,MotionBook,Best Flipbook Animation Maker,https://drive.google.com/thumbnail?id=1p4_odPzBN9tlhsyjg2L_NJuUvDEz4P13&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/motionbook-draw-animate/id1350671732,Art,Primary;Visual Arts,Expired
+137,Murf AI,,,,,LAQ,Being Purchased
+138,Musescore Music Sheet,,,,,Performing Arts,Being Purchased
+139,Musical Futures,,,,,Performing Arts,Active (Purchased)
+140,MusicPlay,,,,,Primary,Being Purchased
+141,Myimath,,,,,Mathematics,Active (Purchased)
+142,New York Times FULL access,,,,,Secondary Library,Active (Purchased)
+143,Newsela,,,,,Primary Library,Being Purchased
+144,Noodle Tools,,,,,Primary Library,Being Purchased
+145,Noodle Tools,,,,,Secondary Library,Active (Purchased)
+146,Number Frames,A Math Learning Center tool,https://drive.google.com/thumbnail?id=1VC8yAE420XqbTSS2JL--BLxiY2qPlk6n&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/number-frames-by-mlc/id873198123,Mathematics,Primary;Mathematics,Active (Free)
+147,Onform (Coach Plan),,,,,PHE,Being Purchased
+148,OpenApply,,,,,Whole School,Active (Purchased)
+149,Overdrive (Sora),,,,,Secondary Library,Active (Purchased)
+150,Padlet,Collaboratation Board,https://drive.google.com/thumbnail?id=1qIL9vpT2TnyJ3a2QEuIaMDsGGK0RexV9&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/padlet/id834618886,UOI,Primary,Active (Purchased)
+151,Padlet,,,,,Whole School,Active (Purchased)
+152,Paul Hoang Answer Key for Latest Edition (5) - Business Management,,,,,I&S,Active (Purchased)
+153,Philpot,,,,,L&L,Active (Purchased)
+154,Pivot interactives,,,,,Science,Active (Purchased)
+155,Pixton,,,,,Primary,Expired
+156,Post-it,Brainstorm. Capture. Share.,https://drive.google.com/thumbnail?id=1A3cxv3VuxKm0YB7uRiQHzfOzlMzSTecj&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/post-it/id920127738,Productivity,Primary;PHE,Active (Free)
+157,PowerNotes,,,,,Secondary Library,Being Purchased
+158,Procreate,,,,,Visual Arts,Active (Purchased)
+159,Proquest,,,,,Secondary Library,Expired
+160,Puppet Pals 2,Puppet Pals is an amazing app that lets you create animated cartoons,https://drive.google.com/thumbnail?id=1oDGEc16nnsdwGGvs8etpW6m7hlv_Wng4&sz=w{{130}}-h{{130}},https://apps.apple.com/gr/app/puppet-pals-2-school-edition/id557616416,UOI,Primary,Expired
+161,Q-files,,,,,Secondary Library,Expired
+162,Quaver Music,,,,,Primary,Active (Purchased)
+163,Question Bank: Computer Science and Design Technology Bundle,,,,,Design,Active (Purchased)
+164,Quizizz,Quizzes that engage everyone,https://drive.google.com/thumbnail?id=1mqeEYmegnjjIG4hEjP44gvUMsZfIuJlZ&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/quizizz-play-to-learn/id1160249042,Quiz,Primary,Active (Free)
+165,Quizzes,,,,,Primary,Being Purchased
+166,Revision Village: Maths AA,,,,,Mathematics,Being Purchased
+167,Revision Village: Maths AI,,,,,Mathematics,Being Purchased
+168,Save My Exam,,,,,Mathematics,Being Purchased
+169,Save My Exams,,,,,Science,Being Purchased
+170,School Cloud,,,,,Whole School,Active (Purchased)
+171,School Library Journal (SLJ),,,,,Secondary Library,Active (Purchased)
+172,Scratch Jr,"With ScratchJr, young children (ages 5-7) learn important new skills as they program their own interactive stories and games.",https://drive.google.com/thumbnail?id=1Fqkx7lsCv752PJ4EwuM7j2vSgEmo7OjU&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/scratchjr/id895485086,Coding,Primary,Active (Free)
+173,Seesaw,PYP Class Portfolio,https://drive.google.com/thumbnail?id=1hncaB2WDSmJvFu9yY4gdqVaskAeP5Myj&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/seesaw-class/id930565184,Management;Whiteboard,Primary,Active (Purchased)
+174,Seesaw,,,,,Whole Primary,Active (Purchased)
+175,Singup,,,,,Performing Arts,Being Purchased
+176,Springshare: LibGuides with CMS Add-on,,,,,Secondary Library,Active (Purchased)
+177,Statista,,,,,Secondary Library,Active (Purchased)
+178,Stop Motion Studio Pro,,,,,Visual Arts,Active (Purchased)
+179,Tayasui Sketches School,Beautiful drawing tools,https://drive.google.com/thumbnail?id=1Jvi_5Cc-7DSZdf7bJL-9acFy6OzQFOcs&sz=w{{130}}-h{{130}},https://apps.apple.com/by/app/tayasui-sketches-school/id1354087061,Art,Primary;Visual Arts,Expired
+180,Teachchemistry.org,,,,,Science,Active (Purchased)
+181,Teacher Starter,,,,,Primary,Expired
+182,Teachers Pay Teachers,,,,,PHE,Active (Purchased)
+183,teachitlanguage,,,,,LAQ,Active (Purchased)
+184,The Economist.com,,,,,I&S,Active (Purchased)
+185,The Guardian,,,,,L&L,Being Purchased
+186,The New Yorker Magazine,,,,,Secondary Library,Expired
+187,The Washington Post,,,,,L&L,Being Purchased
+188,Theatre folk,,,,,Performing Arts,Active (Purchased)
+189,Thinglink,"Immersive storytelling for everyone: Easily augment photos with text, audio, closeup photos, links, and video.",https://drive.google.com/thumbnail?id=1OFdyQiTcCtUvZEntZyrTEzQwZJY2bwgU&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/thinglink/id647304300,Presentation,Primary,Expired
+190,thisisschool,,,,,LAQ,Active (Purchased)
+191,Times of India,,,,,L&L,Being Purchased
+192,TOK.net,,,,,TOK,Active (Purchased)
+193,Toontastic HD,"With Toontastic 3D you can draw, animate, and narrate your own cartoons.",https://drive.google.com/thumbnail?id=1a0R1o2i5EKpP_XAFc2XInfmjU3M0xdVb&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/toontastic-3d/id1145104532,Video,Primary,Expired
+194,Turnitin with AI,,,,,Secondary Library,Active (Purchased)
+195,Twinkl,,,,,Primary,Active (Purchased)
+196,Tynker,Tynker is the #1 Kids Coding platform! Over 60 million kids and thousands of schools use Tynker's award-winning curriculum to learn to code!,https://drive.google.com/thumbnail?id=12ijfJs-FBjhVH65bbNkLuS_GikOZBns5&sz=w{{130}}-h{{130}},https://apps.apple.com/my/app/tynker-coding-games-for-kids/id805869467,Coding,Primary,Active (Free)
+197,Tynker Jr,Even pre-readers can learn to code with Tynker Junior!,https://drive.google.com/thumbnail?id=1GQ-tpTMRZnaWsSGCk0h99YI8nZrqA-DK&sz=w{{130}}-h{{130}},https://apps.apple.com/cy/app/tynker-junior/id1393933000,Coding,Primary;Early Years,Active (Free)
+198,UCAS: EDT Key Statistics Auto-Renewal,,,,,College Counselor,Active (Purchased)
+199,V-ideo,,,,,Visual Arts,Active (Purchased)
+200,Vernier Pro version - Graphical analysis tool,,,,,PHE,Active (Purchased)
+201,Vex Code VR premium,,,,,Design,Being Purchased
+202,Voice Threads,,,,,LAQ,Being Purchased
+203,Wet-Dry-Try Handwriting,Writing Letters & Numbers,https://drive.google.com/thumbnail?id=1NO1tDpjUJDwQr2XMz8voiaQJ6bl1JcqF&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/wet-dry-try-handwriting/id1527186072,Handwriting,Primary;Early Years,Active (Free)
+204,White Rose Education,,,,,Primary,Active (Purchased)
+205,WIDA Membership,,,,,Primary,Active (Purchased)
+206,WIX,,,,,Whole School,Active (Purchased)
+207,Wordwall,,,,,Primary,Active (Purchased)
+208,Yousician,,,,,Performing Arts,Active (Purchased)
+
+209,Zoom,"Zoom is a reliable tool for meetings with 100+ people, with built-in call recording, text chat, and screen sharing. It even scales video quality to avoid dropped calls.",https://drive.google.com/thumbnail?id=1dBDdXTR00FVYoUn9gQPMLnBVTrBHWG-z&sz=w{{130}}-h{{130}},https://apps.apple.com/us/app/zoom-cloud-meetings/id546505307,Video,Whole School,Expired
